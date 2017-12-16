@@ -1,0 +1,225 @@
+@import '_layout/_normalize';
+@import '_fonts';
+@import '_variables';
+@import '_layout/_layout';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body {
+    background: $head-color url('../img/BGopacity.jpg') center no-repeat / cover;
+    font: 400 14px/1.57 $font-main;
+    color: $primary-color;
+}
+
+
+/* Layout */
+
+.ba-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+}
+
+
+/* Typography */
+
+input[type="submit"],
+input[type="button"],
+button {
+    transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button {
+    display: inline-block;
+    border: none; 
+    border-radius: 2px;
+    background-color: $control-color;
+    height: 55px;
+    line-height: 55px;
+    color: $secondary-color;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 35px; 
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover {
+    background: darken($control-color, 20%);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+    transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {}
+
+textarea {}
+
+
+.ba-card{
+    max-width: 600px;
+    margin: 100px auto;
+    background-color: $head-color;
+    &__toggle{
+        padding: 32px 0 29px; 
+    }
+}
+
+.ba-tab {
+    display: none;
+    
+    &--active{
+        display: block;
+        padding: 55px 40px 63px 47px;
+        background: $bg-tab;   
+    }
+    
+    &-menu{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        li{
+            text-decoration: none;
+            display: inline-block;
+            padding: 0px 28px 0 38px
+        }
+
+        p {
+            margin: 0;
+        }
+
+        svg {
+            fill: currentColor;
+        }
+
+        &__item{
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 16px; 
+            color: $primary-color;
+            position: relative;
+            transition: color .3s ease-in;
+            &:hover{
+                color: lighten($primary-color, 10%);
+                transition: color .3s ease-in; 
+            }
+            
+            &--active{
+                color: $secondary-color;
+                &:hover{
+                    color: $secondary-color;
+                }
+                &::after{
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    width: 150px;
+                    height: 2px;
+                    background: currentColor; 
+                    bottom: -29px;
+                    left: -20px;  
+                }
+            }   
+        }
+    }
+}
+
+.ba-item{
+    &__description{
+        position: relative; 
+        padding-left: 8px;
+        padding-top: 12px;  
+    }
+    &__score{
+        position: absolute;
+        right: 2px;
+        top: 2px; 
+    }
+    &__cover{
+        padding-top: 4px;
+        img{
+            padding-bottom: 20px;
+        }
+    }
+    &__raiting{
+        padding: 1px 0 0 8px;
+    }
+    &__title{
+        color: $secondary-color;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 1;
+    }
+    &__subtitle{
+        color: $secondary-color-2;
+        line-height: 1.62;
+        margin: 8px 0 34px
+    }
+    &__price{
+        span {
+            color: $rating-color;
+            font-size: 12px; 
+            font-weight: 700;
+            padding-left: 2px;
+        }
+        p{
+            color: $secondary-color;
+            margin: 0;
+            font-size: 32px;
+            line-height: 1;
+        }
+    }
+    &__shop{
+        padding-top: 47px;
+    }
+}
+
+.ba-star{
+    color: $stars-color;
+    fill: $stars-color;
+    margin-left: 7px;
+    &--active{
+        fill: $rating-color;
+    }
+}
+
+.ba-width{
+    &-custom{
+        &-35{
+          width: 35.333%;  
+        }
+        &-65{
+            width: 64.667%;
+        }
+    }
+}
+
+
+
