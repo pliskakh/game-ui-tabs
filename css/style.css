@@ -661,6 +661,16 @@ select {
   transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+  outline: 1px dotted fuchsia;
+}
+
 .ba-card {
   max-width: 600px;
   margin: 100px auto;
